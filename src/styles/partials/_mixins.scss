@@ -1,7 +1,12 @@
 @use "./variables" as *;
 
 @mixin media-size($screen) {
-	@media (max-width: $screen) {
+	@media (min-width: $screen) {
 		@content;
 	}
+}
+
+@mixin font-sizing($size, $height) {
+	font-size: $size;
+	line-height: $height;
 }

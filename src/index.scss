@@ -1,6 +1,11 @@
 @use "./styles/partials/typography";
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/mixins" as *;
+@use "./styles/partials/placeholders" as *;
+
+:root {
+	font-size: 62.5%;
+}
 
 body {
 	box-sizing: border-box;
@@ -15,4 +20,12 @@ body {
 	box-sizing: inherit;
 	padding: 0;
 	margin: 0;
+}
+
+h1 {
+	@extend %page-header;
+}
+
+h2 {
+	@extend %sub-header;
 }

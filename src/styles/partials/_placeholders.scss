@@ -1,0 +1,58 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+%page-header {
+	@include font-sizing(2.8rem, 3.6rem);
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		@include font-sizing(3.2rem, 4rem);
+	}
+}
+
+%sub-header {
+	@include font-sizing(2rem, 2.8rem);
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		@include font-sizing(2.4rem, 3.2rem);
+	}
+}
+
+%labels-links-buttons {
+	@include font-sizing(1.3rem, 2rem);
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		@include font-sizing(1.4rem, 2.2rem);
+	}
+}
+
+%table-header {
+	@include font-sizing(1.1rem, 1.6rem);
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		@include font-sizing(1.2rem, 1.8rem);
+	}
+}
+
+%body-large {
+	@include font-sizing(1.5rem, 2.6rem);
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		@include font-sizing(1.6rem, 2.8rem);
+	}
+}
+
+%body-medium {
+	@include font-sizing(1.3rem, 2rem);
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		@include font-sizing(1.4rem, 2.2rem);
+	}
+}
+
+%body-small {
+	@include font-sizing(1.1rem, 1.6rem);
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		@include font-sizing(1.2rem, 1.8rem);
+	}
+}
