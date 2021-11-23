@@ -1,3 +1,4 @@
+/*----------- Colors -----------*/
 $instock-black: #13182c;
 $slate: #5c667e;
 $graphite: #232940;
@@ -24,3 +25,9 @@ $cta-bg: $light-grey;
 
 $in-stock-bg: $green;
 $out-of-stock-bg: $red;
+
+$screen-size: (
+	"mobile": 375px,
+	"tablet": 768px,
+	"desktop": 1280px,
+);
