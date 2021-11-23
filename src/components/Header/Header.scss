@@ -1,0 +1,63 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/placeholders" as *;
+
+.Header {
+	background-color: $navigation-header-bg;
+	padding: 2.4rem map-get($margins, "mobile");
+
+	&__container {
+		height: 20rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: map-get($screen-size, "desktop");
+
+		@include media-size(map-get($screen-size, "tablet")) {
+			height: 18.6rem;
+			padding: 3.2rem map-get($margins, "tablet");
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		@include media-size(map-get($screen-size, "desktop")) {
+			margin: 0 auto;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 3rem;
+	}
+
+	&__nav {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+
+		@include media-size(map-get($screen-size, "tablet")) {
+			width: fit-content;
+		}
+	}
+
+	&__nav-item {
+		@extend %labels-links-buttons;
+		color: $global-white;
+		width: 16.4rem;
+		height: 3.6rem;
+		border-radius: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&.active {
+			background-color: $navigation-item-active;
+		}
+
+		@include media-size(map-get($screen-size, "tablet")) {
+			height: 3.8rem;
+			width: 10.7rem;
+		}
+	}
+}

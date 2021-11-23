@@ -1,9 +1,14 @@
 import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Header from "./components/Header/Header";
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Jerick</h1>
+			<Header />
+			<Routes>
+				<Route path="/" element={<Navigate replace to="/warehouses" />} />
+			</Routes>
 		</div>
 	);
 }
