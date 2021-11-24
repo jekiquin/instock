@@ -9,8 +9,14 @@ export default function WarehousePage() {
 
 	useEffect(() => {
 		dispatch(getWarehouses());
-	}, []);
+	}, [dispatch]);
 
-	console.log(warehouseList);
-	return <Warehouse />;
+	return (
+		<main className="WarehousesPage">
+			<h1>Warehouses</h1>
+			{/* add a search component here */}
+			{/* add a button component here */}
+			<Warehouse warehouseList={warehouseList} />
+		</main>
+	);
 }

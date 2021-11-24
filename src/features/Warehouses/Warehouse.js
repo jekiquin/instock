@@ -1,6 +1,12 @@
-import { useSelector, useDispatch } from "@reduxjs/toolkit";
-import { selectWarehouses, getWarehouses } from "./warehouseSlice";
+import { v4 as uuid } from "uuid";
+import WarehouseInfo from "../../components/WarehouseInfo/WarehousInfo";
 
-export default function Warehouse() {
-	return <div></div>;
+export default function Warehouse({ warehouseList }) {
+	return (
+		<div className="Warehouse">
+			{warehouseList.map((warehouse) => (
+				<WarehouseInfo key={uuid()} warehouse={warehouse} />
+			))}
+		</div>
+	);
 }
