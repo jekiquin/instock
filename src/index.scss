@@ -35,3 +35,11 @@ h2 {
 a {
 	text-decoration: none;
 }
+
+main {
+	padding-bottom: 9.6rem; //8rem padding top and bottom plus 1.6rem lineheight
+
+	@include media-size(map-get($screen-size, "desktop")) {
+		padding-bottom: 11.4rem; //9.6rem padding top and bottom plus 1.8rem lineheight
+	}
+}
