@@ -1,6 +1,4 @@
-@use "../../styles/partials/placeholders" as *;
+@use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.WarehousePage {
-	@extend %main;
-}
+@include main-container(".WarehousePage");

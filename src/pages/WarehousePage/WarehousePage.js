@@ -19,11 +19,13 @@ export default function WarehousePage() {
 
 	return (
 		<main className="WarehousePage">
-			<h1>Warehouses</h1>
-			{/* add a search component here */}
-			{/* add a button component here */}
-			{isLoading && <p>Loading Warehouses...</p>}
-			{!isLoading && <Warehouse warehouseList={warehouseList} />}
+			<div className="WarehousePage__container">
+				<h1>Warehouses</h1>
+				{/* add a search component here */}
+				{/* add a button component here */}
+				{isLoading && <p>Loading Warehouses...</p>}
+				{!isLoading && <Warehouse warehouseList={warehouseList} />}
+			</div>
 		</main>
 	);
 }
