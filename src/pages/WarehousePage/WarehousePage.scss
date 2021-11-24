@@ -1,0 +1,6 @@
+@use "../../styles/partials/placeholders" as *;
+@use "../../styles/partials/variables" as *;
+
+.WarehousePage {
+	@extend %main;
+}

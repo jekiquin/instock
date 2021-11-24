@@ -6,13 +6,8 @@
 	@extend %body-small;
 	@extend %flex-center;
 	position: absolute;
-	padding-bottom: 4rem;
 	width: 100%;
 	bottom: 0rem;
-
-	@include media-size(map-get($screen-size, "desktop")) {
-		padding-bottom: 4.8rem;
-	}
 
 	&__ctx {
 		color: $footer-color;

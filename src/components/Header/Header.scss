@@ -5,17 +5,20 @@
 .Header {
 	background-color: $navigation-header-bg;
 	padding: 2.4rem map-get($margins, "mobile");
+	height: 20rem;
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		height: 18.6rem;
+		padding: 3.2rem map-get($margins, "tablet");
+	}
 
 	&__container {
-		height: 20rem;
 		@extend %flex-column-center;
 		justify-content: flex-start;
 		width: 100%;
 		max-width: map-get($screen-size, "desktop");
 
 		@include media-size(map-get($screen-size, "tablet")) {
-			height: 18.6rem;
-			padding: 3.2rem map-get($margins, "tablet");
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: flex-start;
@@ -27,7 +30,11 @@
 	}
 
 	&__logo {
-		margin-bottom: 3rem;
+		margin-bottom: 2.4rem;
+
+		@include media-size(map-get($screen-size, "tablet")) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__nav {

@@ -10,7 +10,7 @@ export const warehouseSlice = createSlice({
 	name: "warehouses",
 	initialState: {
 		warehouses: [],
-		isLoading: false,
+		isLoading: true,
 		failedToLoad: false,
 	},
 	reducers: {},
