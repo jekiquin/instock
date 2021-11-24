@@ -1,4 +1,5 @@
 import "./Footer.scss";
+import env from "react-dotenv";
 
 export default function Footer() {
 	return (

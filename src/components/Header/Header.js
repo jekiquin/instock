@@ -7,7 +7,7 @@ const NAVITEMS = ["Warehouses", "Inventory"];
 
 export default function Header() {
 	const navItems = NAVITEMS.map((item) => (
-		<NavLink exact key={uuid()} className="Header__nav-item" to={`/${item.toLowerCase()}`}>
+		<NavLink key={uuid()} className="Header__nav-item" to={`/${item.toLowerCase()}`}>
 			{item}
 		</NavLink>
 	));
