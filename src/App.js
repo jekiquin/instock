@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import WarehousePage from "./mock/WarehousePage/WarehousePage";
 
 function App() {
 	return (
@@ -9,6 +10,7 @@ function App() {
 			<Header />
 			<Routes>
 				<Route path="/" element={<Navigate replace to="/warehouses" />} />
+				<Route path="/warehouses" element={<WarehousePage />} />
 			</Routes>
 			<Footer />
 		</div>
