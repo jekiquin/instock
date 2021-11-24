@@ -10,6 +10,7 @@
 
 #mock
 /src/mock
+/src/mockServiceWorker.js
 
 # testing
 /coverage

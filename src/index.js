@@ -6,6 +6,12 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import "./index.scss";
 
+// running mockapi on development
+if (process.env.NODE_ENV === "development") {
+	const { worker } = require("./mock/browser");
+	worker.start();
+}
+
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
