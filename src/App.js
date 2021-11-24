@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import WarehousePage from "./mock/WarehousePage/WarehousePage";
+import WarehousePage from "./pages/WarehousePage/WarehousePage";
 
 function App() {
 	return (
