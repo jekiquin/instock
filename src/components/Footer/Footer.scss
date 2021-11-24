@@ -1,0 +1,19 @@
+@use "../../styles/partials/placeholders" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Footer {
+	@extend %body-small;
+	text-align: center;
+	margin: 4rem 0;
+	position: absolute;
+	bottom: 0;
+
+	@include media-size(map-get($screen-size, "desktop")) {
+		margin: 4.8rem 0;
+	}
+
+	&__ctx {
+		color: $footer-color;
+	}
+}
