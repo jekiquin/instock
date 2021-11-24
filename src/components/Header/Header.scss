@@ -8,9 +8,8 @@
 
 	&__container {
 		height: 20rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@extend %flex-column-center;
+		justify-content: flex-start;
 		width: 100%;
 		max-width: map-get($screen-size, "desktop");
 
@@ -32,7 +31,7 @@
 	}
 
 	&__nav {
-		display: flex;
+		@extend %flex;
 		width: 100%;
 		justify-content: space-around;
 
@@ -47,9 +46,7 @@
 		width: 16.4rem;
 		height: 3.6rem;
 		border-radius: 2rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@extend %flex-center;
 
 		&.active {
 			background-color: $navigation-item-active;

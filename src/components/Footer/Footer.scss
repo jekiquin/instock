@@ -4,13 +4,14 @@
 
 .Footer {
 	@extend %body-small;
-	text-align: center;
-	margin: 4rem 0;
+	@extend %flex-center;
 	position: absolute;
+	padding: 4rem 0;
+	width: 100%;
 	bottom: 0;
 
 	@include media-size(map-get($screen-size, "desktop")) {
-		margin: 4.8rem 0;
+		padding: 4.8rem 0;
 	}
 
 	&__ctx {
