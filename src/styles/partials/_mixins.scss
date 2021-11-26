@@ -37,3 +37,9 @@
 		}
 	}
 }
+
+@mixin cta-container-row($width, $height, $margin) {
+	width: $width;
+	height: $height;
+	margin: $margin;
+}

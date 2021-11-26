@@ -9,5 +9,15 @@
 	@include media-size(map-get($screen-size, "tablet")) {
 		padding-left: 3.2rem;
 		padding-right: 3.2rem;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__cta-container {
+		@extend %flex-column;
+
+		@include media-size(map-get($screen-size, "tablet")) {
+			flex-direction: row;
+		}
 	}
 }

@@ -1,15 +1,11 @@
-import { useDispatch } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
+import "./MainAddButton.scss";
 
 export default function MainAddButton({ label, action }) {
-	const dispatch = useDispatch();
-	const onClickHandler = () => {
-		// dispatch(action);
-	};
+	const { pathname } = useLocation();
 	return (
-		<>
-			<button className="MainAddButton" onClick={onClickHandler}>
-				{`+ Add New ${label}`}
-			</button>
-		</>
+		<Link to={`${pathname}/add`} className="MainAddButton">
+			{`+ Add New ${label}`}
+		</Link>
 	);
 }

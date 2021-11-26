@@ -13,14 +13,12 @@ export default function Search() {
 	};
 
 	return (
-		<>
-			<input
-				className="Search"
-				type="search"
-				placeholder="Search..."
-				value={searchTerm}
-				onChange={inputSearchTerm}
-			/>
-		</>
+		<input
+			className="Search"
+			type="search"
+			placeholder="Search..."
+			value={searchTerm}
+			onChange={inputSearchTerm}
+		/>
 	);
 }
