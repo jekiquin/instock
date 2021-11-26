@@ -1,12 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import {
-	selectWarehouses,
-	getWarehouses,
-	selectSearchedWarehouses,
-} from "../../features/Warehouses/warehouseSlice";
+import { getWarehouses, selectSearchedWarehouses } from "../../features/Warehouses/warehouseSlice";
 import Warehouse from "../../features/Warehouses/Warehouse";
 import PageHead from "../../components/PageHead/PageHead";
+import PAGELABELS from "../../data/page-labels";
 import "./WarehousePage.scss";
 
 export default function WarehousePage() {
@@ -20,7 +17,7 @@ export default function WarehousePage() {
 	return (
 		<main className="WarehousePage">
 			<div className="WarehousePage__container">
-				<PageHead header="Warehouses" />
+				<PageHead info={PAGELABELS.warehouse} />
 				<Warehouse warehouseList={warehouseList} />
 			</div>
 		</main>
