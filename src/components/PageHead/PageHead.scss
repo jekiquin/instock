@@ -1,0 +1,13 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/placeholders" as *;
+
+.PageHead {
+	padding: 3.2rem 2.4rem 2.4rem;
+	@extend %flex-column;
+
+	@include media-size(map-get($screen-size, "tablet")) {
+		padding-left: 3.2rem;
+		padding-right: 3.2rem;
+	}
+}

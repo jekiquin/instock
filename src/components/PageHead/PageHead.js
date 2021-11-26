@@ -1,3 +1,5 @@
+import "./PageHead.scss";
+
 export default function PageHead({ header }) {
 	return (
 		<div className="PageHead">
