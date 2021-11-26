@@ -1,4 +1,5 @@
 import "./PageHead.scss";
+import Search from "../../features/Search/Search";
 
 export default function PageHead({ header }) {
 	return (

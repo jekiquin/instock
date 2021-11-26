@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables" as *;
+
+.Search {
+	background-image: url("../../assets/Icons/search-24px.svg");
+	background-size: 1.8rem 1.8rem;
+	background-position: center right 1rem;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 3.6rem;
+	border-radius: 2rem;
+	border: 1px solid $border-color;
+	padding: 0.8rem 1.6rem;
+}
