@@ -1,16 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import {
-	selectWarehouses,
-	isLoadingWarehouses,
-	getWarehouses,
-} from "../../features/Warehouses/warehouseSlice";
+import { selectWarehouses, getWarehouses } from "../../features/Warehouses/warehouseSlice";
 import Warehouse from "../../features/Warehouses/Warehouse";
+import PageHead from "../../components/PageHead/PageHead";
 import "./WarehousePage.scss";
 
 export default function WarehousePage() {
 	const warehouseList = useSelector(selectWarehouses);
-	const isLoading = useSelector(isLoadingWarehouses);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -20,11 +16,8 @@ export default function WarehousePage() {
 	return (
 		<main className="WarehousePage">
 			<div className="WarehousePage__container">
-				<h1>Warehouses</h1>
-				{/* add a search component here */}
-				{/* add a button component here */}
-				{isLoading && <p>Loading Warehouses...</p>}
-				{!isLoading && <Warehouse warehouseList={warehouseList} />}
+				<PageHead header="Warehouses" />
+				<Warehouse warehouseList={warehouseList} />
 			</div>
 		</main>
 	);
