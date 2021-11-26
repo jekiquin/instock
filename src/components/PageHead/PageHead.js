@@ -1,5 +1,5 @@
 import Search from "../../features/Search/Search";
-import MainAddButton from "../../features/MainAddButton/MainAddButton";
+import MainAddButton from "../MainAddButton/MainAddButton";
 import "./PageHead.scss";
 
 export default function PageHead({ info }) {

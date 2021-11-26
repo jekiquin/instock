@@ -1,3 +1,5 @@
+import "./WarehouseInfo.scss";
+
 export default function WarehouseInfo({ warehouse }) {
 	const { name, address, contact } = warehouse;
 	const { name: contactName, phone, email } = contact;
