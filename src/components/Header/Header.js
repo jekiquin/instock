@@ -3,7 +3,7 @@ import { v4 as uuid } from "uuid";
 import "./Header.scss";
 import logo from "../../assets/Logo/InStock-Logo_1x.png";
 
-const NAVITEMS = ["Warehouses", "Inventory"];
+const NAVITEMS = ["Warehouses", "Inventories"];
 
 export default function Header() {
 	const navItems = NAVITEMS.map((item) => (
