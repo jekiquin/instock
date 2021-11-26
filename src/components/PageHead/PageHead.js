@@ -8,7 +8,7 @@ export default function PageHead({ info }) {
 			<h1>{info.header}</h1>
 			<div className="PageHead__cta-container">
 				<Search />
-				<MainAddButton label={info.button} action={info.action} />
+				<MainAddButton label={info.button} />
 			</div>
 		</div>
 	);
