@@ -10,4 +10,12 @@
 	border-radius: 2rem;
 	border: 1px solid $border-color;
 	padding: 0.8rem 1.6rem;
+
+	// removing the x button default on edge and chrome
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		display: none;
+	}
 }

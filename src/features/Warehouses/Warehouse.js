@@ -1,6 +1,6 @@
 import { v4 as uuid } from "uuid";
 import { isLoadingWarehouses } from "./warehouseSlice";
-import WarehouseInfo from "../../components/WarehouseInfo/WarehousInfo";
+import WarehouseInfo from "../../components/WarehouseInfo/WarehouseInfo";
 import { useSelector } from "react-redux";
 
 export default function Warehouse({ warehouseList }) {
