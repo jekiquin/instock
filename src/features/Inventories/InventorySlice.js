@@ -31,13 +31,13 @@ const inventories = createSlice({
 	}
 });
 
-const getValuesFromInventories = (inventory) => {
+const getValuesFromInventory = (inventory) => {
 	return Object.values(inventory);
 };
 
 const searchTermInInventories = (inventory, searchTerm) => {
-	return getValuesFromInventories(inventory).some((value) =>
-		value.toLowerCase().includes(searchTerm)
+	return getValuesFromInventory(inventory).some((value) =>
+		value.toString().toLowerCase().includes(searchTerm)
 	);
 };
 
