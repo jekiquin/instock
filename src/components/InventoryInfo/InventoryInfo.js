@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router';
-import InfoItems from '../InfoItem/InfoItems';
+import InfoItems from '../InfoItems/InfoItems';
 
 export default function InventoryInfo({ inventory }) {
 	const { id, itemName, category, status, warehouseName } = inventory;

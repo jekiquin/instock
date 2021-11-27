@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router';
-import InfoItems from '../InfoItem/InfoItems';
+import InfoItems from '../InfoItems/InfoItems';
 
 export default function WarehouseInfo({ warehouse }) {
 	const { id, name, address, contact } = warehouse;
