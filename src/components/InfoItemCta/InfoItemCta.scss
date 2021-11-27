@@ -1,0 +1,14 @@
+.InfoItemCta {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	&__link {
+		display: block;
+		height: 1.8rem;
+	}
+
+	&__button {
+		height: 100%;
+		object-fit: contain;
+	}
+}

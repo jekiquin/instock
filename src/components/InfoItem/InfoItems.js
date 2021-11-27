@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
+import InfoItemCta from '../InfoItemCta/InfoItemCta';
 import './InfoItems.scss';
 
 export default function InfoItems({ pathname, data }) {
@@ -23,5 +24,12 @@ export default function InfoItems({ pathname, data }) {
 		</div>
 	));
 
-	return <div className={`InfoItems InfoItems--${page}`}>{itemToDisplay}</div>;
+	const id = data[0][3];
+
+	return (
+		<div className={`InfoItems InfoItems--${page}`}>
+			{itemToDisplay}
+			<InfoItemCta pathname={pathname} id={id} />
+		</div>
+	);
 }
