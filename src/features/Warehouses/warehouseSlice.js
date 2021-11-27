@@ -1,17 +1,17 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { axiosInstance } from "../../app/axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { axiosInstance } from '../../app/axios';
 
-export const getWarehouses = createAsyncThunk("warehouses", async () => {
-	const response = await axiosInstance.get("/warehouses");
+export const getWarehouses = createAsyncThunk('warehouses', async () => {
+	const response = await axiosInstance.get('/warehouses');
 	return response.data;
 });
 
-export const warehouseSlice = createSlice({
-	name: "warehouses",
+const warehouseSlice = createSlice({
+	name: 'warehouses',
 	initialState: {
 		warehouses: [],
 		isLoading: true,
-		failedToLoad: false,
+		failedToLoad: false
 	},
 	reducers: {},
 	extraReducers: {
@@ -27,13 +27,13 @@ export const warehouseSlice = createSlice({
 		[getWarehouses.rejected]: (state, action) => {
 			state.isLoading = false;
 			state.failedToLoad = true;
-		},
-	},
+		}
+	}
 });
 
 const getValuesFromWarehouse = (warehouse) => {
 	const warehouseValues = Object.values(warehouse);
-	const contactIndex = warehouseValues.findIndex((value) => typeof value === "object");
+	const contactIndex = warehouseValues.findIndex((value) => typeof value === 'object');
 	const contactValues = Object.values(warehouseValues[contactIndex]);
 	warehouseValues.splice(contactIndex, 1, ...contactValues);
 	return warehouseValues;
@@ -52,6 +52,6 @@ const filterWarehousesBySearch = (warehouses, searchTerm) => {
 export const selectWarehouses = (state) => state.warehouses.warehouses;
 export const isLoadingWarehouses = (state) => state.warehouses.isLoading;
 export const selectSearchedWarehouses = (state) =>
-	filterWarehousesBySearch(state.warehouses.warehouses, state.search.searchTerm);
+	filterWarehousesBySearch(selectWarehouses(state), state.search.searchTerm);
 
 export default warehouseSlice.reducer;
