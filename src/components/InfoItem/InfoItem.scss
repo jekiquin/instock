@@ -1,13 +1,19 @@
 @use '../../styles/partials/placeholders' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
 .InfoItem {
 	$parent: &;
+	width: 100%;
 	display: grid;
 	grid-template: repeat(2, 1fr) / repeat(2, 1fr);
 	grid-auto-flow: column;
 	grid-auto-rows: 1fr;
 	grid-gap: 1.6rem 1.6rem;
+
+	@include media-size(map-get($screen-size, 'tablet')) {
+		display: flex;
+	}
 
 	&--inventories {
 		grid-template-areas:
@@ -22,9 +28,27 @@
 		}
 	}
 
+	&__item {
+		&--inventories {
+			@include media-size(map-get($screen-size, 'tablet')) {
+				width: 20%;
+			}
+		}
+
+		&--warehouses {
+			@include media-size(map-get($screen-size, 'tablet')) {
+				width: 25%;
+			}
+		}
+	}
+
 	&__label {
 		@extend %table-header;
 		color: $table-header-color;
+
+		@include media-size(map-get($screen-size, 'tablet')) {
+			display: none;
+		}
 	}
 
 	&__info {

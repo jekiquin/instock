@@ -7,7 +7,7 @@ import {
 } from '../../features/Inventories/InventorySlice';
 import Inventory from '../../features/Inventories/Inventory';
 import PageHead from '../../components/PageHead/PageHead';
-import PAGELABELS from '../../data/page-labels';
+import { PAGELABELS } from '../../data/page-labels';
 import './InventoryPage.scss';
 
 export default function InventoryPage() {

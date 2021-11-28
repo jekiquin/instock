@@ -6,7 +6,10 @@ import './InfoItemCta.scss';
 export default function InfoItemCta({ pathname, id }) {
 	return (
 		<div className="InfoItemCta">
-			<Link className="InfoItemCta__link" to={`${pathname}/delete/${id}`}>
+			<Link
+				className="InfoItemCta__link InfoItemCta__link--edit"
+				to={`${pathname}/delete/${id}`}
+			>
 				<img className="InfoItemCta__button" src={deleteButton} alt="edit button" />
 			</Link>
 			<Link className="InfoItemCta__link" to={`${pathname}/edit/${id}`}>

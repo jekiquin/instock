@@ -1,5 +1,7 @@
 import { useLocation } from 'react-router';
+import { labelsFromInfo, pathToPageName } from '../../utils/utils';
 import InfoItems from '../InfoItems/InfoItems';
+import InfoItemLabels from '../InfoItemLabel/InfoItemLabel';
 
 export default function WarehouseInfo({ warehouse }) {
 	const { id, name, address, city, country, contact } = warehouse;
@@ -21,5 +23,13 @@ export default function WarehouseInfo({ warehouse }) {
 		]
 	];
 
-	return <InfoItems pathname={pathname} data={warehouseInfo} />;
+	const page = pathToPageName(pathname);
+	const labels = labelsFromInfo(warehouseInfo);
+
+	return (
+		<>
+			<InfoItemLabels page={page} labels={labels} />
+			<InfoItems pathname={pathname} data={warehouseInfo} />
+		</>
+	);
 }

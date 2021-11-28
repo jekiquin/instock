@@ -1,4 +1,6 @@
 import { useLocation } from 'react-router';
+import { labelsFromInfo, pathToPageName } from '../../utils/utils';
+import InfoItemLabels from '../InfoItemLabel/InfoItemLabel';
 import InfoItems from '../InfoItems/InfoItems';
 
 export default function InventoryInfo({ inventory }) {
@@ -13,5 +15,13 @@ export default function InventoryInfo({ inventory }) {
 		['WAREHOUSE', warehouseName, 'normal']
 	];
 
-	return <InfoItems pathname={pathname} data={inventoryInfo} />;
+	const page = pathToPageName(pathname);
+	const labels = labelsFromInfo(inventoryInfo);
+
+	return (
+		<>
+			<InfoItemLabels page={page} labels={labels} />
+			<InfoItems pathname={pathname} data={inventoryInfo} />
+		</>
+	);
 }

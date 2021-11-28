@@ -26,7 +26,7 @@ export default function InfoItem({ pathname, data }) {
 	};
 
 	const itemToDisplay = data.map((item, index) => (
-		<div key={uuid()} className="InfoItem__item">
+		<div key={uuid()} className={`InfoItem__item InfoItem__item--${page}`}>
 			<p className="InfoItem__label">{item[0]}</p>
 			{displayInfo(item.slice(1))}
 		</div>

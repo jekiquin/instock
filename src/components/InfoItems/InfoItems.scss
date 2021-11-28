@@ -1,7 +1,13 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/placeholders' as *;
+@use '../../styles/partials/mixins' as *;
 
 .InfoItems {
 	border-top: 1px solid $border-color;
 	padding: 1.6rem 2.4rem 2.7rem;
+
+	@include media-size(map-get($screen-size, 'tablet')) {
+		display: flex;
+		justify-content: space-between;
+	}
 }

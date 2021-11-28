@@ -7,7 +7,7 @@ import {
 } from '../../features/Warehouses/warehouseSlice';
 import Warehouse from '../../features/Warehouses/Warehouse';
 import PageHead from '../../components/PageHead/PageHead';
-import PAGELABELS from '../../data/page-labels';
+import { PAGELABELS } from '../../data/page-labels';
 import './WarehousePage.scss';
 
 export default function WarehousePage() {

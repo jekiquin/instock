@@ -1,12 +1,23 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
 .InfoItemCta {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 	margin-top: 1.6rem;
 
+	@include media-size(map-get($screen-size, 'tablet')) {
+		width: fit-content;
+	}
+
 	&__link {
 		display: block;
 		height: 1.8rem;
+
+		&--edit {
+			margin-right: 2.4rem;
+		}
 	}
 
 	&__button {
