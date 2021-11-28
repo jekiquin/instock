@@ -9,6 +9,7 @@
 
 	@include media-size(map-get($screen-size, 'tablet')) {
 		width: 6rem;
+		margin: 0;
 	}
 
 	&__link {

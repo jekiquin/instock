@@ -54,7 +54,7 @@
 
 	&__label {
 		@extend %table-header;
-		color: $table-header-color;
+		margin-bottom: 0.4rem;
 
 		@include media-size(map-get($screen-size, 'tablet')) {
 			display: none;

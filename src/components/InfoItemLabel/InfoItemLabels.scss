@@ -1,5 +1,6 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/placeholders' as *;
 
 .InfoItemLabels {
 	display: none;
@@ -23,6 +24,10 @@
 		&--warehouses {
 			grid-template: 1fr / repeat(4, 1fr);
 		}
+	}
+
+	&__label {
+		@extend %table-header;
 	}
 
 	&__action {
