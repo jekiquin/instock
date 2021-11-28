@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getData } from '../../app/axios';
+import { getInventories } from '../Inventories/InventorySlice';
 
 export const getWarehouses = createAsyncThunk('warehouses', async () => {
 	return await getData('/warehouses');
@@ -52,5 +53,23 @@ export const selectWarehouses = (state) => state.warehouses.warehouses;
 export const isLoadingWarehouses = (state) => state.warehouses.isLoading;
 export const selectSearchedWarehouses = (state) =>
 	filterWarehousesBySearch(selectWarehouses(state), state.search.searchTerm);
+
+export const getWarehouseById = (id) => {
+	return (state) => {
+		const warehouse = state.warehouses.warehouses.find((warehouse) => warehouse.id === id);
+		const inventoryAtWarehouse = state.inventories.inventories.filter(
+			(inventory) => inventory.warehouseID === id
+		);
+
+		return { ...warehouse, inventories: inventoryAtWarehouse };
+	};
+};
+
+export const getAllData = () => {
+	return (dispatch) => {
+		dispatch(getWarehouses());
+		dispatch(getInventories());
+	};
+};
 
 export default warehouseSlice.reducer;

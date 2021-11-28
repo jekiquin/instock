@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { pathToPageName } from '../../utils/utils';
 import {
-	getInventories,
 	selectInventories,
 	selectSearchedInventories
 } from '../../features/Inventories/InventorySlice';
+import { getAllData } from '../../features/Warehouses/warehouseSlice';
 import Inventory from '../../features/Inventories/Inventory';
 import PageHead from '../../components/PageHead/PageHead';
 import InfoItemLabels from '../../components/InfoItemLabel/InfoItemLabel';
@@ -22,7 +22,7 @@ export default function InventoriesPage() {
 
 	useEffect(() => {
 		if (!allInventories.length) {
-			dispatch(getInventories());
+			dispatch(getAllData());
 		}
 	}, [dispatch, allInventories]);
 	return (

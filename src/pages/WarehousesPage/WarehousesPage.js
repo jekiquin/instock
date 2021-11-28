@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { pathToPageName } from '../../utils/utils';
 import {
-	getWarehouses,
+	getAllData,
 	selectSearchedWarehouses,
 	selectWarehouses
 } from '../../features/Warehouses/warehouseSlice';
@@ -22,7 +22,7 @@ export default function WarehousesPage() {
 
 	useEffect(() => {
 		if (!allWarehouses.length) {
-			dispatch(getWarehouses());
+			dispatch(getAllData());
 		}
 	}, [dispatch, allWarehouses]);
 
