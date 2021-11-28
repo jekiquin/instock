@@ -70,8 +70,19 @@
 			color: $interactive-color;
 
 			&::after {
-				content: url('../../assets/Icons/chevron_right-24px.svg');
-				vertical-align: middle;
+				// content: url('../../assets/Icons/chevron_right-24px.svg');
+				// vertical-align: middle;
+
+				background-image: url('../../assets/Icons/chevron_right-24px.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position-y: top;
+				content: '';
+				height: 2.2rem;
+				width: 2.2em;
+				display: inline-block;
+				margin-left: 0.9rem;
+				vertical-align: text-top;
 			}
 		}
 	}
