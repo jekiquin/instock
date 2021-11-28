@@ -1,7 +1,7 @@
-@use "./styles/partials/typography";
-@use "./styles/partials/variables" as *;
-@use "./styles/partials/mixins" as *;
-@use "./styles/partials/placeholders" as *;
+@use './styles/partials/typography';
+@use './styles/partials/variables' as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/placeholders' as *;
 
 :root {
 	font-size: 62.5%;
@@ -9,7 +9,7 @@
 
 body {
 	box-sizing: border-box;
-	font-family: "Titillium Web", sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	color: $global-text-color;
 	background-color: $page-bg;
 	min-height: 100vh;
@@ -34,4 +34,8 @@ h2 {
 
 a {
 	text-decoration: none;
+}
+
+button {
+	font-family: inherit;
 }
