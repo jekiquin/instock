@@ -28,7 +28,7 @@ export default function InventoryPage() {
 	return (
 		<main className="InventoryPage">
 			<div className="InventoryPage__container">
-				<PageHead info={PAGELABELS.inventory} />
+				<PageHead info={PAGELABELS.inventories} />
 				<InfoItemLabels labels={HEADERLABELS.INVENTORY} page={page} />
 				<Inventory inventoryList={searchedInventory} />
 			</div>

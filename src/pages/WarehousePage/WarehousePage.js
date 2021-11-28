@@ -29,7 +29,7 @@ export default function WarehousePage() {
 	return (
 		<main className="WarehousePage">
 			<div className="WarehousePage__container">
-				<PageHead info={PAGELABELS.warehouse} />
+				<PageHead info={PAGELABELS.warehouses} />
 				<InfoItemLabels page={page} labels={HEADERLABELS.WAREHOUSE} />
 				<Warehouse warehouseList={searchedWarehouse} />
 			</div>

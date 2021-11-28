@@ -1,9 +1,8 @@
-import { NavLink, Link } from "react-router-dom";
-import { v4 as uuid } from "uuid";
-import "./Header.scss";
-import logo from "../../assets/Logo/InStock-Logo_1x.png";
-
-const NAVITEMS = ["Warehouses", "Inventories"];
+import { NavLink, Link } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
+import { NAVITEMS } from '../../data/page-labels';
+import logo from '../../assets/Logo/InStock-Logo_1x.png';
+import './Header.scss';
 
 export default function Header() {
 	const navItems = NAVITEMS.map((item) => (
