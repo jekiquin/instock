@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import './InfoItem.scss';
 
-const FULLWIDTH = 'normal-fullwidth';
-
 export default function InfoItem({ pathname, data }) {
 	const page = pathname.replace('/', '');
 	const displayInfo = (item) => {

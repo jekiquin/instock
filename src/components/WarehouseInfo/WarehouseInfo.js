@@ -1,7 +1,6 @@
-import { useLocation } from 'react-router';
-import { labelsFromInfo, pathToPageName } from '../../utils/utils';
 import InfoItems from '../InfoItems/InfoItems';
-import InfoItemLabels from '../InfoItemLabel/InfoItemLabel';
+import { HEADERLABELS } from '../../data/page-labels';
+import { useLocation } from 'react-router';
 
 export default function WarehouseInfo({ warehouse }) {
 	const { id, name, address, city, country, contact } = warehouse;
@@ -9,11 +8,11 @@ export default function WarehouseInfo({ warehouse }) {
 	const { pathname } = useLocation();
 
 	const warehouseInfo = [
-		['WAREHOUSE', name, 'link', id],
-		['ADDRESS', `${address}, ${city}, ${country}`, 'normal'],
-		['CONTACT NAME', contactName, 'normal'],
+		[HEADERLABELS.WAREHOUSE[0], name, 'link', id],
+		[HEADERLABELS.WAREHOUSE[1], `${address}, ${city}, ${country}`, 'normal'],
+		[HEADERLABELS.WAREHOUSE[2], contactName, 'normal'],
 		[
-			'CONTACT INFO',
+			HEADERLABELS.WAREHOUSE[3],
 			<>
 				{phone}
 				<br />
@@ -23,13 +22,5 @@ export default function WarehouseInfo({ warehouse }) {
 		]
 	];
 
-	const page = pathToPageName(pathname);
-	const labels = labelsFromInfo(warehouseInfo);
-
-	return (
-		<>
-			<InfoItemLabels page={page} labels={labels} />
-			<InfoItems pathname={pathname} data={warehouseInfo} />
-		</>
-	);
+	return <InfoItems pathname={pathname} data={warehouseInfo} />;
 }
