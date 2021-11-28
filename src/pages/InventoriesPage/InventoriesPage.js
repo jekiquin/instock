@@ -11,9 +11,9 @@ import Inventory from '../../features/Inventories/Inventory';
 import PageHead from '../../components/PageHead/PageHead';
 import InfoItemLabels from '../../components/InfoItemLabel/InfoItemLabel';
 import { HEADERLABELS, PAGELABELS } from '../../data/page-labels';
-import './InventoryPage.scss';
+import './InventoriesPage.scss';
 
-export default function InventoryPage() {
+export default function InventoriesPage() {
 	const searchedInventory = useSelector(selectSearchedInventories);
 	const allInventories = useSelector(selectInventories);
 	const dispatch = useDispatch();
@@ -26,8 +26,8 @@ export default function InventoryPage() {
 		}
 	}, [dispatch, allInventories]);
 	return (
-		<main className="InventoryPage">
-			<div className="InventoryPage__container">
+		<main className="InventoriesPage">
+			<div className="InventoriesPage__container">
 				<PageHead info={PAGELABELS.inventories} />
 				<InfoItemLabels labels={HEADERLABELS.INVENTORY} page={page} />
 				<Inventory inventoryList={searchedInventory} />

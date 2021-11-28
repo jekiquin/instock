@@ -11,9 +11,9 @@ import Warehouse from '../../features/Warehouses/Warehouse';
 import PageHead from '../../components/PageHead/PageHead';
 import InfoItemLabels from '../../components/InfoItemLabel/InfoItemLabel';
 import { PAGELABELS, HEADERLABELS } from '../../data/page-labels';
-import './WarehousePage.scss';
+import './WarehousesPage.scss';
 
-export default function WarehousePage() {
+export default function WarehousesPage() {
 	const searchedWarehouse = useSelector(selectSearchedWarehouses);
 	const allWarehouses = useSelector(selectWarehouses);
 	const dispatch = useDispatch();
@@ -27,8 +27,8 @@ export default function WarehousePage() {
 	}, [dispatch, allWarehouses]);
 
 	return (
-		<main className="WarehousePage">
-			<div className="WarehousePage__container">
+		<main className="WarehousesPage">
+			<div className="WarehousesPage__container">
 				<PageHead info={PAGELABELS.warehouses} />
 				<InfoItemLabels page={page} labels={HEADERLABELS.WAREHOUSE} />
 				<Warehouse warehouseList={searchedWarehouse} />
