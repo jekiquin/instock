@@ -19,11 +19,16 @@
 
 	&__label {
 		&--inventories {
-			width: 25%;
-		}
-
-		&--inventories {
 			width: 20%;
 		}
+
+		&--warehouses {
+			width: 25%;
+		}
+	}
+
+	&__action {
+		width: 6rem;
+		text-align: end;
 	}
 }

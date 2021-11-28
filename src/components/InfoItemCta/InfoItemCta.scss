@@ -4,11 +4,10 @@
 .InfoItemCta {
 	display: flex;
 	width: 100%;
-	justify-content: space-between;
 	margin-top: 1.6rem;
 
 	@include media-size(map-get($screen-size, 'tablet')) {
-		width: fit-content;
+		width: 6rem;
 	}
 
 	&__link {

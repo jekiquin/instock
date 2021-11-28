@@ -13,6 +13,7 @@
 
 	@include media-size(map-get($screen-size, 'tablet')) {
 		display: flex;
+		grid-gap: 0;
 	}
 
 	&--inventories {
