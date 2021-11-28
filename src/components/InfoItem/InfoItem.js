@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
+import { pathToPageName } from '../../utils/utils';
 import './InfoItem.scss';
 
 export default function InfoItem({ pathname, data }) {
-	const page = pathname.replace('/', '');
+	const page = pathToPageName(pathname);
 	const displayInfo = (item) => {
 		const [info, category, rest] = item;
 		switch (category) {

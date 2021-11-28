@@ -1,5 +1,5 @@
 export function pathToPageName(pathname) {
-	return pathname.replace('/', '');
+	return pathname.split('/')[1];
 }
 
 export function labelsFromInfo(data) {
