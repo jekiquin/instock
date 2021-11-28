@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
+import './InfoItem.scss';
+
+const FULLWIDTH = 'normal-fullwidth';
 
 export default function InfoItem({ pathname, data }) {
 	const page = pathname.replace('/', '');
@@ -7,20 +10,27 @@ export default function InfoItem({ pathname, data }) {
 		const [info, category, rest] = item;
 		switch (category) {
 			case 'link':
-				return <Link to={`${pathname}/${rest}`}>{info}</Link>;
+				return (
+					<Link
+						className={`InfoItem__info InfoItem__info--link`}
+						to={`${pathname}/${rest}`}
+					>
+						{info}
+					</Link>
+				);
 			case 'special':
-				return <p className={`InfoItems__info InfoItems__info--${rest}`}>{info}</p>;
+				return <p className="InfoItem__info">{info}</p>;
 			default:
-				return <p className={`InfoItems__info InfoItems__info--${page}`}>{info}</p>;
+				return <p className="InfoItem__info">{info}</p>;
 		}
 	};
 
-	const itemToDisplay = data.map((item) => (
-		<div key={uuid()} className={`InfoItems__item InfoItems__item--${page}`}>
-			<p className={`InfoItems__label InfoItems__label--${page}`}>{item[0]}</p>
+	const itemToDisplay = data.map((item, index) => (
+		<div key={uuid()} className="InfoItem__item">
+			<p className="InfoItem__label">{item[0]}</p>
 			{displayInfo(item.slice(1))}
 		</div>
 	));
 
-	return <>{itemToDisplay}</>;
+	return <div className={`InfoItem InfoItem--${page}`}>{itemToDisplay}</div>;
 }

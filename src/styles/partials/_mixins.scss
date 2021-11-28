@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use './variables' as *;
 
 @mixin media-size($screen) {
 	@media (min-width: $screen) {
@@ -13,10 +13,10 @@
 
 @mixin main-container($main) {
 	#{$main} {
-		padding: 0 map-get($margins, "mobile");
+		padding: 0 map-get($margins, 'mobile');
 
-		@include media-size(map-get($screen-size, "tablet")) {
-			padding: 0 map-get($margins, "tablet");
+		@include media-size(map-get($screen-size, 'tablet')) {
+			padding: 0 map-get($margins, 'tablet');
 		}
 
 		&__container {
@@ -25,14 +25,14 @@
 			border-radius: 0.3rem;
 			background-color: $global-white;
 			box-shadow: 0px 2px 5px rgba($instock-black, 0.1);
-			max-width: map-get($screen-size, "desktop");
+			max-width: map-get($screen-size, 'desktop');
 
-			@include media-size(map-get($screen-size, "tablet")) {
+			@include media-size(map-get($screen-size, 'tablet')) {
 				top: -9.4rem;
 			}
 
-			@include media-size(map-get($screen-size, "desktop")) {
-				margin: 0 map-get($margins, "desktop");
+			@include media-size(map-get($screen-size, 'desktop')) {
+				margin: 0 map-get($margins, 'desktop');
 			}
 		}
 	}

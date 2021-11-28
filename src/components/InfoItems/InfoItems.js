@@ -10,7 +10,7 @@ export default function InfoItems({ pathname, data }) {
 	return (
 		<div className={`InfoItems InfoItems--${page}`}>
 			<InfoItem pathname={pathname} data={data} />
-			<InfoItemCta pathname={pathname} id={id} />
+			<InfoItemCta className="InfoItems__buttons" pathname={pathname} id={id} />
 		</div>
 	);
 }
