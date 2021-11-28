@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import WarehousesPage from './pages/WarehousesPage/WarehousesPage';
 import InventoriesPage from './pages/InventoriesPage/InventoriesPage';
+import WarehouseDetailsPage from './pages/WarehouseDetailsPage/WarehouseDetailsPage';
 
 function App() {
 	return (
@@ -12,6 +13,8 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Navigate replace to="/warehouses" />} />
 				<Route path="/warehouses" element={<WarehousesPage />} />
+				<Route path="/warehouses/:warehouseId" element={<WarehouseDetailsPage />} />
+
 				<Route path="/inventories" element={<InventoriesPage />} />
 			</Routes>
 			<Footer />
