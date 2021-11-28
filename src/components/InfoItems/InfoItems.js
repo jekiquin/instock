@@ -5,7 +5,6 @@ import './InfoItems.scss';
 
 export default function InfoItems({ pathname, data }) {
 	const page = pathToPageName(pathname);
-	console.log(page);
 
 	const id = data[0][3];
 
